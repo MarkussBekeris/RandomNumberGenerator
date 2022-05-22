@@ -10,13 +10,15 @@ def classic():
         rand = r.randint(startingNumber, endingNumber)
         print(rand)
 
-def classicCommas():
+def Commas():
     for i in range(count):
         comma = r.randint(1, 9)
         rand = r.randint(startingNumber, endingNumber)
         print("%s,%s"%(rand, comma))
 
-if commaQ == "Y":
-    classicCommas()
-elif commaQ == "N":
+if commaQ == "N" or "n":
     classic()
+elif commaQ == "Y" or "y":
+    Commas()
+else:
+    print("Error! You have to enter a number!")
