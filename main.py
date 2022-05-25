@@ -1,24 +1,29 @@
 import random as r
 
-count = int(input("Count for how many numbers you need: "))
-commaQ = input("Use random commas - Y / N: ")
-startingNumber = int(input("Starting number: "))
-endingNumber = int(input("Ending number: "))
-
 def classic():
+    count = int(input("Count for how many numbers you need: "))
+
+    startingNumber = int(input("Starting number: "))
+    endingNumber = int(input("Ending number: "))
     for i in range(count):
         rand = r.randint(startingNumber, endingNumber)
         print(rand)
 
 def Commas():
+    count = int(input("Count for how many numbers you need: "))
+
+    startingNumber = int(input("Starting number: "))
+    endingNumber = int(input("Ending number: "))
     for i in range(count):
         comma = r.randint(1, 9)
         rand = r.randint(startingNumber, endingNumber)
         print("%s,%s"%(rand, comma))
 
-if commaQ == "N" or "n":
+commaQ = input("Use random commas - Y / N: ")
+
+if commaQ == "N":
     classic()
-elif commaQ == "Y" or "y":
+elif commaQ == "Y":
     Commas()
 else:
-    print("Error! You have to enter a number!")
+    print("Error! You have to enter Y or N, with caps!")
